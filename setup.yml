@@ -14,7 +14,7 @@
       name: otusadm
       create_home: yes
       uid: 1040
-      password: otus2024
+      password: "{{otus2024 | password_hash('sha512')}}"
       group: admin
       shell: /bin/bash
       state: present
@@ -24,6 +24,6 @@
       name: otus
       create_home: yes
       uid: 1041
-      password: otus2024
+      password: "{{otus2024 | password_hash('sha512')}}"
       shell: /bin/bash
       state: present
