@@ -6,8 +6,8 @@
   tasks:
   - name: create group
     group:
-    name: admin
-    state: present
+      name: admin
+      state: present
 
   - name: Create adm User
     user:
@@ -17,11 +17,13 @@
       password: otus2024
       groupe: admin
       shell: /bin/bash
+      state: present
 
   - name: Create User
     user:
       name: otus
       create_home: yes
-      uid: 1040
+      uid: 1041
       password: otus2024
       shell: /bin/bash
+      state: present
