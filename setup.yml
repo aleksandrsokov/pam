@@ -31,3 +31,9 @@
 
   - name: add users to admin groupe
     shell: usermod root -a -G admin && usermod vagrant -a -G admin
+
+  - name: copy sh file
+    copy: 
+      src: login.sh
+      dst: /usr/local/bin/login.sh
+      mode: +x
