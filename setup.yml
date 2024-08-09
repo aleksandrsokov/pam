@@ -5,7 +5,7 @@
  
   tasks:
   - name: Ensure group "admin" exists
-  ansible.builtin.group:
+    group:
     name: admin
     state: present
 
