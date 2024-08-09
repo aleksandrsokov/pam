@@ -35,5 +35,5 @@
   - name: copy sh file
     copy: 
       src: login.sh
-      dst: /usr/local/bin/login.sh
+      dest: /usr/local/bin/login.sh
       mode: +x
