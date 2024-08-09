@@ -1,7 +1,4 @@
 ---
-env_vars:
-  pass: otus2024
-
 - name: PAM
   hosts: all
   become: yes
@@ -17,7 +14,7 @@ env_vars:
       name: otusadm
       create_home: yes
       uid: 1040
-      password: "{{pass | password_hash('sha512')}}"
+      password: "{{password | password_hash('sha512')}}"
       group: admin
       shell: /bin/bash
       state: present
@@ -27,6 +24,6 @@ env_vars:
       name: otus
       create_home: yes
       uid: 1041
-      password: "{{pass | password_hash('sha512')}}"
+      password: "{{password | password_hash('sha512')}}"
       shell: /bin/bash
       state: present
