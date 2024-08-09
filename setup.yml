@@ -4,7 +4,7 @@
   become: yes
  
   tasks:
-  - name: Ensure group "admin" exists!
+  - name: create group
     group:
     name: admin
     state: present
