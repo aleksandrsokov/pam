@@ -15,7 +15,7 @@
       create_home: yes
       uid: 1040
       password: otus2024
-      groupe: admin
+      group: admin
       shell: /bin/bash
       state: present
 
