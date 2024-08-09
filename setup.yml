@@ -29,5 +29,5 @@
       shell: /bin/bash
       state: present
 
-- name: add users to admin groupe
-  shell: usermod root -a -G admin && usermod vagrant -a -G admin
+  - name: add users to admin groupe
+    shell: usermod root -a -G admin && usermod vagrant -a -G admin
