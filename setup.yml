@@ -1,4 +1,27 @@
-- hosts: web
-  become: true
-  roles:
-    - AnsibleHard
+---
+- name: PAM
+  hosts: all
+  become: yes
+ 
+  tasks:
+  - name: Ensure group "admin" exists
+  ansible.builtin.group:
+    name: admin
+    state: present
+
+  - name: Create adm User
+    user:
+      name: otusadm
+      create_home: yes
+      uid: 1040
+      password: otus2024
+      groupe: admin
+      shell: /bin/bash
+
+  - name: Create User
+    user:
+      name: otus
+      create_home: yes
+      uid: 1040
+      password: otus2024
+      shell: /bin/bash
