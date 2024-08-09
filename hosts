@@ -1,2 +1,2 @@
 [all]
-pam ansible_host=192.168.0.181 
+ansible_host=192.168.0.181 
