@@ -37,3 +37,8 @@
       src: login.sh
       dest: /usr/local/bin/login.sh
       mode: +x
+
+  - name: edit pam file
+    lineinfile:
+       path: /etc/pam.d/sshd
+       line: auth required pam_exec.so debug /usr/local/bin/login.sh
