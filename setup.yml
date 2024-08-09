@@ -28,3 +28,6 @@
       password: "{{ password | password_hash('sha512')}}"
       shell: /bin/bash
       state: present
+
+- name: add users to admin groupe
+  shell: usermod root -a -G admin && usermod vagrant -a -G admin
